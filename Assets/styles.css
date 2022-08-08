@@ -32,6 +32,7 @@ body {
     width: 550px;
     background-color: white;
     border-radius: 10px;
+    display: none;
 }
 
 .quiz-box header {
@@ -68,7 +69,7 @@ body {
 }
 
 .quiz-box header .timer .timer-seconds {
-    user-select: ;
+    user-select: none;
 }
 
 .quiz-box section {
@@ -96,6 +97,24 @@ body {
     align-items: center;
     border-radius: 5px;
     justify-content: space-between;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.selection:hover {
+    background-color: lightgoldenrodyellow;
+}
+
+.selection:last-child {
+    margin-bottom: 0px;
+}
+
+.icon {
+    height: 25px;
+}
+
+.icon-tick {
+    border-color: blue;
 }
 
 .start-quiz-box .start-quiz-box-title {
@@ -143,3 +162,39 @@ body {
     color: white;
 }
 
+.quiz-box footer {
+    width: 100%;
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 25px;
+}
+
+.quiz-box footer .total-count span{
+    display: flex;
+    user-select: none;
+    font-size: 14px;
+}
+
+footer .total-count span p{
+font-weight: bold;
+padding: 0 8px;
+margin-bottom: 15px;
+}
+
+footer .next-button {
+    margin-bottom: 15px;
+    height: 40px;
+    padding: 0 15px;
+    border: 1.5px solid lightgray;
+    border-radius: 5px;
+    padding: 8px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.next-button:hover {
+    background-color: lightskyblue;
+    color: white;
+}
