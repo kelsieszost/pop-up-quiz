@@ -20,6 +20,7 @@ body {
     transform: translate(-50%, -50%);
     border-radius: 10px;
     display: none;
+   
 }
 
 .quiz-box {
@@ -29,8 +30,75 @@ body {
     transform: translate(-50%, -50%);
     line-height: 30px;
     width: 550px;
+    background-color: white;
+    border-radius: 10px;
 }
-.start-quiz-box .start-quiz-box-title, {
+
+.quiz-box header {
+    height: 70px;
+    padding: 0 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 200px;
+    border-radius: 5px 5px 0 0;
+    box-shadow: 0 2px 2px 1px lightblue;
+}
+
+.quiz-box header .title {
+    font-size: 20px;
+    font-weight: 200px;
+}
+
+.quiz-box header .timer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+    width: 130px;
+    height: 50px;
+    background-color: aliceblue;
+    padding: 0 8px;
+    border-radius: 5px;
+}
+
+.quiz-box header .timer .timer-text {
+    user-select: none;
+}
+
+.quiz-box header .timer .timer-seconds {
+    user-select: ;
+}
+
+.quiz-box section {
+    padding: 25px 25px 25px 25px;
+}
+
+.questions {
+    font-size: 19px;
+    font-weight: 300;
+    height: 50px;
+}
+
+.selection-list {
+    padding: 25px;
+    display: block;
+}
+
+.selection {
+    background-color: aliceblue;
+    height: 50px;
+    padding: 5px 10px;
+    border: 1px solid white;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    justify-content: space-between;
+}
+
+.start-quiz-box .start-quiz-box-title {
     height: 50px;
     width: 100%;
     display: flex;
