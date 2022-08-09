@@ -1,3 +1,5 @@
+
+
 * {
     margin: 0;
     padding: 0;
@@ -197,4 +199,15 @@ footer .next-button {
 .next-button:hover {
     background-color: lightskyblue;
     color: white;
+}
+
+.result-box {
+    background-color: white;
+    width: 400px;
+    padding: 25px 30px;
+    border-radius: 5px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-between;
 }
