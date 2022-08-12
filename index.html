@@ -20,7 +20,7 @@
             <p class="start-quiz-paragraph-content">To answer the following code-related questions wiithin the time limit. Keep in mind incorrect answers will penalize your score/time by ten seconds!</p>
         </div>
      <!--Start Quiz BTN-->
-       <div class="start-button"><button class="start-quiz-button">Start Quiz</button></div>
+       <button class="start-button"id="start-quiz-button">Start Quiz</button>
     </div>
     <!--Quiz Box-->
     <div class="quiz-box">
@@ -33,22 +33,22 @@
         </header>
         <section>
             <div class="questions">
-                <span>JavaScript is a ___ side programming language.</span>
+                <span id="question"></span>
             </div>
             <div class="selction-list">
                 <div class="selection">
-                    <span>Client</span>
+                    <span id="choice-one">Client</span>
                     <div class="icon-check"><i class="fas fa-check"></i></div>
                 </div>
                 <div class="selection">
-                    <span>Server</span>
+                    <span id="choice-two">Server</span>
                     <div class="icon-cross"><i class="fas fa-times"></i></div>
                 </div>
                 <div class="selection">
-                    <span>Both</span>
+                    <span id="choice-three">Both</span>
                 </div>
                 <div class="selection">
-                    <span>None</span>
+                    <span id="choice-four">None</span>
                 </div>   
             </div>    
         </section>
@@ -67,14 +67,15 @@
         </footer>
     </div>
         <!--Results-->
-        <div class="resultbox">
+        <div class="result-box">
             <div class="completed-text">All Done!</div>
             <div class="score-text">
                 <span>You got only<p>2</p>out of<p>5</p></span>
             </div>
-            <div class="restart">
-                <button class="restart"></button>
+            <div class="restart-button">
+                <button class="restart">Restart</button>
             </div>
         </div>
+    <script src="Assets/script.js"></script>
 </body>
 </html>
