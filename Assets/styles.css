@@ -1,0 +1,49 @@
+body {
+    background-color: skyblue;
+}
+
+h1 {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 50px;
+}
+
+h3 {
+    font-size: medium;
+}
+
+h4 {
+    font-size: small;
+}
+
+#startscreen, #quizpage, #endgame, #highscores {
+    background-color: white;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 20px;
+    padding: 50px;
+}
+
+#startBtn, #highScoresList, #A, #B, #C, #D {
+    background-color: skyblue;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 5px;
+    font-size: large;
+}
+
+#countdown {
+    margin: 20px;
+}
+
+#questionlist {
+    margin: 20px;
+    font-size: large;
+}
+
+#leaderboard {
+    margin: 20px;
+    text-align: center;
+}
