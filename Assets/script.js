@@ -86,3 +86,32 @@ let questions =[
         correctChoice: "C",
 }
 ];
+
+var quizLength = questions.length
+
+function startQuiz() {
+    startScreen.style.display = "none";
+    addQuizQuestions();
+    timeClock =setInterval(function(){
+        timeRemaining --;
+        countDown.textContent = "Time Remaining: " + timeRemaining;
+    if(timeRemaining === 0 || questionIndex === quizLength){
+        clearInterval(timeClock);
+        endGame.style.display = "block";
+        quizpage.style.display = "none";
+        displayScore();
+    }
+    
+    }, 1000);
+    quizPage.style.display = "block";
+};
+
+function addQuestions(){
+    
+    var currentQuestion = questions[questionIndex];
+    questionList.textContent = currentQuestion.question;
+    buttonA.textContent = currentQuestion.A;
+    buttonB.textContent = currentQuestion.B;
+    buttonC.textContent = currentQuestion.C;
+    buttonD.textContent = currentQuestion.D;
+};
