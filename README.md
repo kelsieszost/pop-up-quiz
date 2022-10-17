@@ -2,9 +2,7 @@
 A JavaScript quiz
 
 ## Description
-I needed more time on this assigment to work out my styling issues and continue editing my JS. I am submitting what I have currently but plan to resubmit this assignment. 
-
-- My motivation for this assigment was to combine what I had learned in JS in addition to what I have learned about APIs. The final product was supposed to be a pop-up quiz with a working timer and questions.
+A JavaScript pop-up quiz that tests users knowledge of JS skills while timing them. Each wrong answer subtracts 5 seconds from the alloted time. A list of highscores is kept giving the user the ability to clear the scores. 
 
 ## Usage
 
