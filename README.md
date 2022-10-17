@@ -8,7 +8,7 @@ I needed more time on this assigment to work out my styling issues and continue 
 
 ## Usage
 
-Screenshot: ![Screenshot](assests/images/screenshot.png)
+<img src="./Assets/Images/coding_quiz.png"><img>
 
 https://kelsieszost.github.io/pop-up-quiz/
 
