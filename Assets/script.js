@@ -31,3 +31,58 @@ var score= 0;
 var leaderBoard = [];
 var text = document.createElement("text");
 
+let questions =[
+
+    {
+    question: "Which Of The Dialog Box Display a Message And a Data Entry Field?",
+    
+    A: "Integer.Parse",
+    B: "Parse.Int",
+    C: "None",
+    D: "Int.Parse",
+   
+    correctChoice: "D"
+},
+{
+    question: "Which Of The Dialog Box Display a Message And a Data Entry Field?",
+    
+        A:"Alert()",
+        B: "Prompt()",
+        C: "Confirm()",
+        D: "Msg()",
+    
+        correctChoice: "B",
+},
+{
+    question: "IsNaN() Evaluates And Argument To Determine if Given Value:",
+    
+        A: "Is Not a Null",
+        B: "Is Not a Number",
+        C: "Is Not a New Object",
+        D: "None of the Above",
+    
+        correctChoice: "B"
+},
+{
+    question: "A Function Associated With An object is Called:",
+    
+    
+        A: "Function",
+        B: "Method",
+        C: "Link",
+        D: "None",
+    
+        correctChoice: "B",
+
+},
+{
+    question: "Event is Used To Check An Empty Text Box:",
+    
+        A: "Onclick()",
+        B: "OnFocus()",
+        C: "OnBlur()",
+        D: "None",
+    
+        correctChoice: "C",
+}
+];
