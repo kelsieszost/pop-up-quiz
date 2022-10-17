@@ -115,3 +115,30 @@ function addQuestions(){
     buttonC.textContent = currentQuestion.C;
     buttonD.textContent = currentQuestion.D;
 };
+
+function checkAnswer (answer){
+    rightwrong.setAttribute("style", "display:Block");
+    rightwrong.appendChild(text);
+   
+    correct = questions[questionIndex].correctChoice;
+
+    if (answer === correct && questionIndex !== quizLength ){
+        text.textContent = "Correct!";
+        questionIndex++;
+        score++;
+        
+    }else if(answer !== correct && questionIndex !== quizLength){
+        text.textContent ="Incorrect!";
+        questionIndex++;
+        timeRemaining = timeRemaining -10;
+        countDown.textContent = "Time Remaining" + timeRemaining;
+
+    }else{
+        displayScore();
+    }
+
+    if (questionIndex !== quizLength){
+        addQuestions();
+    }
+
+};
