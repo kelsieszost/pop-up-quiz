@@ -16,12 +16,12 @@ var yourScore = document.querySelector("#yourscore");
 var initialsEl = document.querySelector("#enterinitials");
 var submitScore = document.querySelector("#submit");
 var leaderboardEl = document.querySelector("#leaderboard");
-var highscoreElm = document.querySelector("#highscorelist");
+var highscoreElm = document.querySelector("#highscores");
 var leaderNamesDisplay = document.querySelector("#leaderinitials");
 var leaderScoresDisplay = document.querySelector("#leaderscores");
 var clearDataBtn = document.querySelector("#clearscore");
-var playAgainBtn = document.querySelector("#playagain");
-var highScoreBtn= document.querySelector("#highscores");
+var playAgain = document.querySelector("#playAgainBtn");
+var highScoreBtn= document.querySelector("#highScoresList");
 
 var timeRemaining = 60;
 var timeClock;
@@ -91,7 +91,7 @@ var quizLength = questions.length
 
 function startQuiz() {
     startScreen.style.display = "none";
-    addQuizQuestions();
+    addQuestions();
     timeClock =setInterval(function(){
         timeRemaining --;
         countDown.textContent = "Time Remaining: " + timeRemaining;
@@ -142,3 +142,84 @@ function checkAnswer (answer){
     }
 
 };
+
+startBtn.addEventListener("click", startQuiz);
+
+submitScore.addEventListener("click", function highscoreEl(){
+    highscoreElm.setAttribute("style", "display: block");
+
+    if(initialsEl.value === ""){
+        alert("Enter Your Initials");
+        highscoreElm.setAttribute("style", "display: none");
+        return false;
+    }else{
+        var pastHighScores = JSON.parse(localStorage.getItem("pastHighScores")) || [];
+        var newName = initialsEl.value.trim();
+        var newHighscore ={
+            name : newName,
+            score : score
+        }
+    }
+    console.log(newHighscore);
+    pastHighScores.push(newHighscore);
+    localStorage.setItem("pastHighScores", JSON.stringify(pastHighScores));
+    generateHighscore();
+
+});
+
+function displayScore(){
+    initialsEl.value= "";
+    finalScore.textContent = "Your final score is " + score + " out of " + quizLength;
+    
+};
+
+function generateHighscore(){
+    endGame.setAttribute("style", "display: none");
+    leaderNamesDisplay.textContent = "";
+    leaderScoresDisplay.textContent ="";
+    var highscores = JSON.parse(localStorage.getItem("pastHighScores")) || [];
+    highscores.sort(function(a,b){
+       return b.score - a.score;
+       
+    })
+
+    for (i=0; i<highscores.length; i++){
+       var newNameInitials = document.createElement("li");
+        newNameInitials.textContent = highscores[i].name + ":" + highscores[i].score;
+        leaderNamesDisplay.appendChild(newNameInitials);
+    }
+            
+        };
+
+
+clearDataBtn.addEventListener("click", clearData);
+  
+function clearData(){
+    localStorage.clear();
+    leaderNamesDisplay.textContent ="";
+    leaderScoresDisplay.textContent = "";
+};
+
+playAgain.addEventListener("click", function(){
+    startScreen.style.display ="block";
+    highscoreElm.setAttribute("style", "display: none");
+    endGame.setAttribute("style", "display: none");
+    timeRemaining = 60;
+    countDown.textContent = "Time Remaining" + timeRemaining;
+    score=0;
+    questionIndex=0;
+    text.textContent = "";
+   
+});
+
+highScoreBtn.addEventListener("click", function(){
+    endGame.setAttribute("style", "display: none");
+    startScreen.setAttribute("style", "display: none");
+    highscoreElm.setAttribute("style", "display: block");
+    generateHighscore();
+    
+
+
+});
+
+
